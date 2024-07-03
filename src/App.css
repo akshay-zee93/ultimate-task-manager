@@ -1,0 +1,6 @@
+.react-datepicker__view-calendar-icon {
+  input {
+    width: 150px;
+    padding: 5px 15px 2px 35px;
+  }
+}
