@@ -1,8 +1,8 @@
 export const priorityOptions = [
   { value: "", label: "Select Priority" },
-  { value: "1", label: "Low" },
-  { value: "2", label: "Medium" },
-  { value: "3", label: "High" },
+  { value: 0, label: "Low" },
+  { value: 1, label: "Medium" },
+  { value: 2, label: "High" },
 ];
 
 export const statusOptions = [
@@ -17,4 +17,4 @@ export const sortingOptions = [
   { value: "status", label: "Status" },
 ];
 
-export const priorityList = ["Low", "High", "Medium"];
+export const priorityList = ["Low", "Medium", "High"];

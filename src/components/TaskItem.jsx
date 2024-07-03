@@ -35,7 +35,7 @@ function TaskItem({ task, deleteTask }) {
         <p>{task.description}</p>
         <p className="text-sm text-gray-500">Due: {task.dueDate}</p>
         <p className="text-sm text-gray-500">
-          Priority: {priorityList[+task.priority - 1]}
+          Priority: {priorityList[task.priority]}
         </p>
 
         <div className="flex gap-2 items-center">
