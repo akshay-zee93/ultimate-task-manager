@@ -96,7 +96,7 @@ npm install
 Start the application:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Usage
