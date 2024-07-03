@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="bg-blue-600 text-white p-4" role="banner">
+    <header
+      className="fixed top-0 w-full bg-blue-600 text-white p-4"
+      role="banner"
+    >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold lg:text-3xl">Task Manager</h1>
         <nav className="flex gap-4" aria-label="Main navigation">

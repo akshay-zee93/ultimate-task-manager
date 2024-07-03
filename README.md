@@ -32,37 +32,39 @@ The project is organized as follows:
 ```
 ultimate-task-manager/
 ├── src/
-│   ├── components/         # Reusable React components
-│   │   ├── Button.js       # Button component
-│   │   ├── Header.js       # Header component
-│   │   ├── Input.js        # Input component
-│   │   ├── Label.js        # Label component
-│   │   ├── Layout.js       # Layout component
-│   │   ├── Modal.js        # Modal component
-│   │   ├── Select.js       # Select component
-│   │   ├── Tag.js          # Tag component
-│   │   ├── TaskItem.js     # TaskItem component
-│   │   └── TextArea.js     # TextArea component
-│   ├── pages/              # Page components
-│   │   ├── Home.js         # Home page (TaskList)
-│   │   ├── AddTask.js      # TaskForm page
-│   │   └── NotFound.js     # NotFound page
-│   ├── store/              # Redux store and slices
-│   │   ├── index.js        # Store setup
-│   │   ├── taskSlice.js    # Task slice for Redux
-│   └── utils/              # Utility functions
-│       ├── utils.js        # App constant values
-│   │   ├── localstorage.js # localstoage functions
-│   ├── App.css             # Global CSS
-│   ├── App.js              # Main App component
-│   ├── index.css           # Entry point for Tailwind CSS
-│   ├── main.js             # Entry point for React application
+│   ├── components/          # Reusable React components
+│   │   ├── Button.js        # Button component
+│   │   ├── Header.js        # Header component
+│   │   ├── Input.js         # Input component
+│   │   ├── Label.js         # Label component
+│   │   ├── ErrorBoundary.js # Error Boundary component
+│   │   ├── ScrottToTop.js   # Jump to Top component
+│   │   ├── Layout.js        # Layout component
+│   │   ├── Modal.js         # Modal component
+│   │   ├── Select.js        # Select component
+│   │   ├── Tag.js           # Tag component
+│   │   ├── TaskItem.js      # TaskItem component
+│   │   └── TextArea.js      # TextArea component
+│   ├── pages/               # Page components
+│   │   ├── Home.js          # Home page (TaskList)
+│   │   ├── AddTask.js       # TaskForm page
+│   │   └── NotFound.js      # NotFound page
+│   ├── store/               # Redux store and slices
+│   │   ├── index.js         # Store setup
+│   │   ├── taskSlice.js     # Task slice for Redux
+│   └── utils/               # Utility functions
+│       ├── utils.js         # App constant values
+│   │   ├── localstorage.js  # localstoage functions
+│   ├── App.css              # Global CSS
+│   ├── App.js               # Main App component
+│   ├── index.css            # Entry point for Tailwind CSS
+│   ├── main.js              # Entry point for React application
 │   └── ...
-├── index.html              # Main HTML file
-├── .gitignore              # Git ignore file
-├── package-lock.json       # NPM lock file
-├── postcss.config.js       # Tailwind config file
-├── tailwind.config.js      # Tailwind config file
+├── index.html               # Main HTML file
+├── .gitignore               # Git ignore file
+├── package-lock.json        # NPM lock file
+├── postcss.config.js        # Tailwind config file
+├── tailwind.config.js       # Tailwind config file
 
 ├── package.json            # Project metadata and dependencies
 └── README.md               # Project README file
