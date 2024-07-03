@@ -70,7 +70,7 @@ ultimate-task-manager/
 
 ## External Dependencies
 
-- **Redux**: A state management library for managing the application state.
+- **Redux Toolkit**: A state management library for managing the application state.
 - **React Redux**: Official React bindings for Redux.
 - **React Router**: A library for routing in React applications.
 - **React Hot Toast**: A library for showing toast notifications.
