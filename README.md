@@ -8,7 +8,7 @@ This project is a task management application built using React. It allows users
 
 - Features
 - Project Structure
-- Technologies Used
+- External Dependencies
 - Setup Instructions
 - Usage
 
