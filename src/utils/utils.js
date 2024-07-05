@@ -18,3 +18,18 @@ export const sortingOptions = [
 ];
 
 export const priorityList = ["Low", "Medium", "High"];
+
+export const HighlightedText = (text, highlight) => {
+  const startIndex = text.toLowerCase().indexOf(highlight.toLowerCase());
+
+  const endIndex = startIndex + highlight.length;
+  const beforeHighlight = text.slice(0, startIndex);
+  const highlightedText = text.slice(startIndex, endIndex);
+  const afterHighlight = text.slice(endIndex);
+
+  return {
+    beforeHighlight,
+    highlightedText,
+    afterHighlight,
+  };
+};

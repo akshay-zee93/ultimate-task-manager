@@ -172,7 +172,12 @@ function TaskList() {
       {filteredTasks.length > 0 ? (
         <ul>
           {filteredTasks.map((task) => (
-            <TaskItem deleteTask={toggleHandler} key={task.id} task={task} />
+            <TaskItem
+              search={deferredInput}
+              deleteTask={toggleHandler}
+              key={task.id}
+              task={task}
+            />
           ))}
         </ul>
       ) : (

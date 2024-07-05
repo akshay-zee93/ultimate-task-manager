@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PencilSquareIcon from "@heroicons/react/24/solid/PencilSquareIcon";
 import TrashIcon from "@heroicons/react/24/solid/TrashIcon";
@@ -8,10 +8,27 @@ import toast from "react-hot-toast";
 import Input from "./Input";
 import Label from "./Label";
 import Tag from "./Tag";
-import { priorityList } from "../utils/utils";
+import { HighlightedText, priorityList } from "../utils/utils";
 
-function TaskItem({ task, deleteTask }) {
+function TaskItem({ task, deleteTask, search = "" }) {
   const dispatch = useDispatch();
+  const [highlightTitle, setHighlightTitle] = useState({
+    beforeHighlight: "",
+    highlightedText: "",
+    afterHighlight: "",
+  });
+  const [highlightDesc, setHighlightDesc] = useState({
+    beforeHighlight: "",
+    highlightedText: "",
+    afterHighlight: "",
+  });
+
+  useEffect(() => {
+    if (search.length > 0) {
+      setHighlightTitle(HighlightedText(task.title, search));
+      setHighlightDesc(HighlightedText(task.description, search));
+    }
+  }, [search]);
 
   const toggleCompletion = (id) => {
     dispatch(taskStatusUpdate({ id: Number(id) }));
@@ -31,8 +48,27 @@ function TaskItem({ task, deleteTask }) {
               : "border-orange-500 bg-orange-50 text-orange-500"
           }`}
         />
-        <h3 className="text-lg font-bold">{task.title}</h3>
-        <p>{task.description}</p>
+
+        {search.length > 0 ? (
+          <h3 className="text-lg flex font-bold">
+            {highlightTitle.beforeHighlight}
+            <p className=" text-yellow-500">{highlightTitle.highlightedText}</p>
+            {highlightTitle.afterHighlight}
+          </h3>
+        ) : (
+          <h3 className="text-lg flex font-bold">{task.title}</h3>
+        )}
+        {search.length > 0 ? (
+          <span>
+            {highlightDesc.beforeHighlight}
+            <span className="text-yellow-500">
+              {highlightDesc.highlightedText}
+            </span>
+            {highlightDesc.afterHighlight}
+          </span>
+        ) : (
+          <p>{task.description}</p>
+        )}
         <p className="text-sm text-gray-500">Due: {task.dueDate}</p>
         <p className="text-sm text-gray-500">
           Priority: {priorityList[task.priority]}
